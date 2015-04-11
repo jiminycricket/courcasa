@@ -11,11 +11,12 @@ html
       block header
         header#header
           include ../partial/_header
-      .col-1
-        .main
-          block main
-        block aside
-          include ../partial/_aside
+        block cols
+          .col-1
+            .main
+              block main
+            block aside
+              include ../partial/_aside
       block footer
         footer#footer.t-dark
           .pull-right

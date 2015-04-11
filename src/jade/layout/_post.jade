@@ -1,0 +1,16 @@
+extends ../layout/_default
+
+append config
+  - aside_position = 'right'
+
+block cols
+  .col-2
+    .container
+      .main
+        block main
+          include ../partial/_post_article
+          .fb-page(data-href="https://www.facebook.com/1table4chair" data-hide-cover="false" data-show-facepile="true" data-show-posts="false")
+          include ../partial/_post_neighbors
+          include ../partial/_post_disqus
+      block aside
+        include ../partial/_aside
