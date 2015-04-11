@@ -1,0 +1,36 @@
+- var id = section.id
+- var type = section.type
+.post-list(id="#{id}" class="t-#{section.theme} type-#{type}")
+  .container
+    .row
+      .col-xs-2
+        h1= section.header
+      .col-xs-10
+        ul.posts
+          each post in section.posts
+            li.post
+              if id != 'product'
+                .media
+                  .media-left
+                    .media-object.round.cover(style="background-image: url(images/#{post.image}.jpg)")
+                  .media-body
+                    .meta
+                      if id == 'news'
+                        .circle.circle-date
+                          .day= post.day
+                          .month= post.month
+                      else
+                        .circle.circle-popular
+                          .popular= post.popular
+                      .category
+                        a(href="/category/1.html")= post.category
+                        a(href="/category/1.html")= post.subcategory
+                    .text
+                      a.title(href="/post/1.html"): h2= post.title
+                      p= post.p
+              else
+                .cover(style="background-image: url(images/#{post.image}.jpg)")
+                .meta
+                  .category: a(href="#")= post.category
+                  .store= post.store
+                a.title(href="#"): h2= post.title

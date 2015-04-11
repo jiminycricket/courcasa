@@ -1,13 +1,30 @@
-ul.social-links
-  li: a(href="#"): i.fa.fa-envelope
-  li: a(href="#" target="_blank"): i.fa.fa-facebook-square
-  li: a(href="#" target="_blank"): i.fa.fa-twitter-square
-ul.language-selector
-  li(data-lng="en"): a(href="/") EN
-  li(data-lng="jp"): a(href="/jp/") 日文
-  li(data-lng="zh_tw"): a(href="/zh_tw/") 繁中
-nav.menu
-  ul
-    li: a(href=base)= pages.home
-    li: a(href="#{base}faq.html")= pages.faq
-    li: a(href="#{base}media.html")= pages.media
+- var breadcrumb = breadcrumb || false
+header#header
+  #function-bar
+    .pull-right
+      a.btn.btn-primary.small(href="#login") 登入／註冊
+    form#search-form
+      img(src="/images/search.svg")
+      i.small-arrow
+      input#search(type="text" placeholder="輸入你想找的東西")
+    if breadcrumb
+      ul.breadcrumb
+        each link in breadcrumb
+          li: a(href="#{link.path}")= link.title
+  #menu
+    .inline-block
+      a(href="/"): img.logo(src="/images/logo.svg" width="64" height="64")
+    ul.inline-block
+      each text in ["好宅的意義", "不後悔裝修", "全球好設計", "廚衛改造", "家具家飾", "設計達人", "簡体版"]
+        //- - active_class = (!breadcrumb.nil? && breadcrumb[0][:title] == text) ? 'active' : ''
+        - var active_class = ''
+        li.category-item.inline-block(class="#{active_class}")
+          a(href="/category/1.html")= text
+    .social-links.pull-right
+      ul
+        li: a(href="#")
+          i.fa.fa-facebook-square
+        li: a(href="#")
+          i.fa.fa-pinterest-square
+        li: a(href="#")
+          img(src="/images/weibo.svg")

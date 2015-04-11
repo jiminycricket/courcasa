@@ -16,11 +16,9 @@ gulp.task 'yml', ->
     .pipe(deepExtend(locals))
 
 gulp.task 'jade', ['yml'], ->
-  for lang, content of locals
-    dest = lang == 'dev' && config.dest || "#{config.dest}/#{lang}"
-    process = gulp.src(config.src)
-      .pipe(plumber())
-      .pipe(data(content))
-      .pipe(jade({pretty: true}))
-      .pipe(gulp.dest(dest))
-    process.pipe(browserSync.reload({stream:true})) if lang == 'zh_tw'
+  process = gulp.src(config.src)
+    .pipe(plumber())
+    .pipe(data(locals['dev']))
+    .pipe(jade({pretty: true}))
+    .pipe(gulp.dest(config.dest))
+  process.pipe(browserSync.reload({stream:true}))

@@ -1,6 +1,0 @@
-lang: 'zh_tw'
-base: '/zh_tw/'
-pages:
-  home: 'HOME'
-  faq: '問答集'
-  media: '媒體資料'

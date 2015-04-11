@@ -1,8 +1,17 @@
 extends layout/_default
 
-block title
-  title= pages.home
+block main
+  include partial/_index_carousel.jade
 
-block content
-  h1= pages.home
-  i.fc.fc-twitter
+  - var section = index.news
+  include partial/_index_post_list.jade
+
+  - var section = index.popular
+  include partial/_index_post_list.jade
+
+  - var section = index.product
+  include partial/_index_post_list.jade
+
+block aside
+  - var position = bottom
+  include partial/_aside

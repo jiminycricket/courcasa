@@ -3,13 +3,21 @@ html
   head
     include _head
   body
+    include ../partial/_fb_root
     .wrapper
       block header
         header#header
           include ../partial/_header
-      .main
-        block content
+      .col-1
+        .main
+          block main
+        block aside
       block footer
-        footer#footer
+        footer#footer.t-dark
+          .pull-right
+            a(href="#top"): i.fa.fa-arrow-circle-up
+          ul
+            each text in ["about", "往事並不如煙", "著作權聲明", "合作提案", "想登廣告", "想約演講", "想找我們"]
+              li.inline-block: a(href="#")= text
     block outside
     script(src="/javascript/global.js")
