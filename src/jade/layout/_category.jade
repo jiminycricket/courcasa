@@ -1,0 +1,19 @@
+extends ../layout/_default
+
+append config
+  - body_class = 'list-page'
+
+block main
+  .post-list.cover-view
+    ul.posts
+      each post in category.posts
+        li.post
+          .cover(style="background-image: url(/images/#{post.image}.jpg)")
+          a.post-link(href="/post/1.html")
+            h2= post.title
+          .circle.circle-date
+            .day= post.day
+            .month= post.month
+          .category
+            a(href="#")= post.category
+            a(href="#")= post.subcategory

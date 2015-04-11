@@ -5,7 +5,7 @@ doctype html
 html
   head
     include _head
-  body(class=body_class id=body_id)
+  body(id="#{body_id}" class="#{body_class}")
     include ../partial/_fb_root
     .wrapper
       block header
@@ -15,6 +15,7 @@ html
         .main
           block main
         block aside
+          include ../partial/_aside
       block footer
         footer#footer.t-dark
           .pull-right

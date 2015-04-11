@@ -31,7 +31,7 @@ module.exports =
     dest: "#{DEST}/glyphs"
   jade:
     src: [
-      "#{SRC}/jade/*.jade"
+      "#{SRC}/jade/**/*.jade"
       "!#{SRC}/jade/**/_*.jade"
     ],
     yml: "#{SRC}/i18n/*.yml"

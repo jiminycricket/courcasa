@@ -1,6 +1,7 @@
 extends layout/_default
-block config
-  - var body_id ='index'
+
+append config
+  - body_id = 'index'
 
 block main
   include partial/_index_carousel.jade
@@ -13,7 +14,3 @@ block main
 
   - var section = index.product
   include partial/_index_post_list.jade
-
-block aside
-  - var position = 'bottom'
-  include partial/_aside
