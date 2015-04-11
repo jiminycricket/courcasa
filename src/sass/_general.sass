@@ -1,0 +1,38 @@
+*, *:before, *:after
+  box-sizing: border-box
+
+html, body
+  width: 100%
+  min-width: 900px
+  overflow-x: hidden
+  -webkit-tap-highlight-color: rgba($white, 0) // remove ipad reflection
+
+html
+
+body
+  color: $middle-gray
+  background: $light
+  padding-top: 140px
+
+a
+  text-decoration: none
+
+.hide
+  display: none
+
+.pull-left
+  float: left
+
+.pull-right
+  float: right
+
+.clearfix
+  +pie-clearfix
+
+.inline-block
+  display: inline-block
+
+li.inline-block
+  a
+    display: block
+    padding: 0 15px

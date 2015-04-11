@@ -1,0 +1,65 @@
+=min($min)
+  @media (min-width: $min + 1)
+    @content
+
+=max($max)
+  @media (max-width: $max)
+    @content
+
+=between($min, $max)
+  @media (min-width: $min + 1) and (max-width: $max)
+    @content
+
+=mq($device)
+  @if $device == mobile // 0 ~ $mobile
+    +max($mobile)
+      @content
+  @else if $device == desktop // $tablet ~ ∞
+    +min($tablet)
+      @content
+  @else if $device == not-mobile // $mobile ~ ∞
+    +min($mobile)
+      @content
+  @else if $device == not-desktop
+    +max($tablet)
+      @content
+  @else if $device == tablet // $mobile ~ $tablet
+    +between($mobile, $tablet)
+      @content
+  @else if $device == retina
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      @content
+
+=tablet
+  +mq(tablet)
+    @content
+=desktop
+  +mq(desktop)
+    @content
+=mobile
+  +mq(mobile)
+    @content
+=not-mobile
+  +mq(not-mobile)
+    @content
+=not-desktop
+  +mq(not-desktop)
+    @content
+
+=retina
+  +mq(retina)
+    @content
+
+=responsive-padding($pd-mobile, $pd-tablet, $pd-desktop)
+  padding: $pd-mobile
+  +not-mobile
+    padding: $pd-tablet
+  +desktop
+    padding: $pd-desktop
+
+=retina-background-image($filename, $size: null)
+  background-image: url('/images/#{$filename}')
+  +retina
+    background-image: url('/images/2x/#{$filename}')
+  @if $size != null
+    background-size: $size

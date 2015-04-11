@@ -1,0 +1,116 @@
+#header
+  box-shadow: 0 1px 3px rgba(#000, .15)
+  position: fixed
+  width: 100%
+  top: 0
+  z-index: 100
+  .social-links
+    position: relative
+    li
+      float: left
+      margin-left: 10px
+    a
+      line-height: 85px
+      opacity: .8
+      transition: opacity .3s
+      &:hover
+        opacity: 1
+      > *
+        vertical-align: middle
+    .fa
+      font-size: 20px
+    .fa-facebook-square
+      color: #4762a3
+    .fa-pinterest-square
+      color: #cd1d1f
+    &:after
+      position: absolute
+      content: "加入我們！"
+      right: 0
+      bottom: 23px
+      font-size: 11px
+      color: #ccc
+#function-bar
+  height: 40px
+  background: $brown
+  padding: 0 20px
+  position: relative
+  .pull-right
+    height: 28px
+    line-height: 40px
+  .btn
+    line-height: 1
+  #search-form
+    height: 28px
+    line-height: 40px
+    img, input
+      vertical-align: middle
+    img
+      margin-right: 5px
+      margin-left: 5px
+    .small-arrow
+      display: inline-block
+      border-right: 6px solid $white
+      border-top: 5px solid transparent
+      border-bottom: 5px solid transparent
+    input
+      margin-left: -5px
+  #search
+    border: 0
+    border-radius: 4px
+    padding: 0 5px
+    line-height: 1
+    display: inline-block
+    height: 100%
+#menu
+  padding: 0 20px
+  height: 100px
+  background: $white
+  img, ul
+    vertical-align: middle
+  > ul
+    .category-item
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        width: 6px
+        height: 6px
+        margin-left: -3px
+        left: 50%
+        bottom: 28px
+        background: rgba(#337ab7, 0)
+        border-radius: 50%
+        transition: background .3s
+      &.active, &:hover
+        &:before
+          background: #337ab7
+        a
+          color: #337ab7
+      a
+        color: $dark-blue
+        transition: color .3s
+        &:hover
+          color: #337ab7
+  a
+    display: block
+    height: 100px
+    line-height: 100px
+.breadcrumb
+  margin-bottom: 0
+  padding: 0
+  background: none
+  border-radius: 0
+  position: absolute
+  top: 10px
+  left: 50%
+  transform: translateX(-50%)
+  li
+    & + li:before
+      content: '›'
+    &:last-child:before
+      content: '»'
+  a
+    color: $white
+    &:hover
+      border-bottom: 1px dotted

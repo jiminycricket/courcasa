@@ -1,8 +1,11 @@
+block config
+  include _config
+
 doctype html
 html
   head
     include _head
-  body
+  body(class=body_class id=body_id)
     include ../partial/_fb_root
     .wrapper
       block header

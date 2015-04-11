@@ -1,0 +1,67 @@
+article.post
+  .hd
+    position: relative
+    margin-bottom: 50px
+    background: no-repeat right center
+    background-size: contain
+    color: $brown
+    +clearfix
+  .text
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+  .category
+    margin-bottom: 3px
+    a
+      color: $brown
+      &:hover
+        border-bottom: 1px dotted
+      & + a
+        &:before
+          content: '/'
+          margin: 0 5px
+  .tags
+    a
+      padding: 0 5px
+      background: rgba($brown, .7)
+      position: relative
+      margin-left: 10px
+      height: 20px
+      color: $white
+      border-top-right-radius: 3px
+      border-bottom-right-radius: 3px
+      opacity: .7
+      transition: opacity .3s
+      &:hover
+        opacity: 1
+      &:before
+        content: ''
+        position: absolute
+        left: -10px
+        top: 0
+        display: inline-block
+        border-right: 10px solid rgba($brown, .7)
+        border-top: 10px solid transparent
+        border-bottom: 10px solid transparent
+
+  h1
+    margin-bottom: 1em
+    +font-size(large)
+  h2
+    font-weight: bold
+    +font-size(h3)
+  p
+    margin-bottom: 2em
+    line-height: 1.8em
+  hr
+    border-bottom-width: 2px
+    border-style: solid
+  .clearfix
+    margin-bottom: 20px
+  img
+    display: block
+  .bd
+    .aligncenter
+      margin: 20px auto 10px
+
+

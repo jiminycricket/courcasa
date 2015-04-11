@@ -12,11 +12,6 @@ module.exports =
     dir: BOWER
   fontawesome:
     dest: "#{DEST}/fonts"
-  concatCss:
-    src: [
-      "#{DEST}/css/app.css"
-    ]
-    dest: "#{DEST}/css"
   sass:
     src: "#{SRC}/sass/**/*.{sass,scss}"
     dest: "#{DEST}/css"
@@ -24,16 +19,16 @@ module.exports =
       indentedSyntax: true, # Enable .sass syntax!
       imagePath: 'images' # Used by the image-url helper
       includePaths: [
-        "#{SRC}/sass"
         "#{BOWER}/bootstrap-sass-official/assets/stylesheets"
         "#{BOWER}/fontawesome/scss"
+        "#{SRC}/sass"
       ]
   images:
     src: "#{SRC}/images/**"
     dest: "#{DEST}/images"
-  svgs:
-    src: "#{SRC}/images/*.svg"
-    dest: "#{DEST}/images"
+  glyphs:
+    src: "#{DEST}/glyphs/*.svg"
+    dest: "#{DEST}/glyphs"
   jade:
     src: [
       "#{SRC}/jade/*.jade"

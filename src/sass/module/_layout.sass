@@ -1,0 +1,16 @@
+.col-1
+  .main
+.col-2
+  $side-width: 260px
+  > .container
+    padding: 30px 0
+    +clearfix
+  .main
+    float: left
+    width: calc(100% - #{$side-width})
+    padding-right: 30px
+  #aside
+    float: right
+    width: $side-width
+    .container
+      width: auto

@@ -1,0 +1,15 @@
+=font-size($size)
+  $list: map-get($font-size, $size)
+  font-size: nth($list, 1)
+  @if length($list) >= 2
+    +not-mobile
+      font-size: nth($list, 2)
+  @if length($list) == 3
+    +desktop
+      font-size: nth($list, 3)
+
+=font-weight($weight)
+  $list: map-get($font-weight, $weight)
+  font-weight: nth($list, 1)
+  +not-mobile
+    font-weight: nth($list, 2)

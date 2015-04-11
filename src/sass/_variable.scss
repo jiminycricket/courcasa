@@ -1,0 +1,69 @@
+// Colors
+$white       : #fff;
+$brown       : #6f524a;
+$light       : #ebf1f9;
+$middle-gray : #535353;
+$dark        : #323232;
+$gray-blue   : #a8b3bb;
+$light-brown : #e1ddda;
+$courcasa-blue: #2a5e86;
+$dark-blue: #0c3454;
+
+$themes: (
+  light-blue: (
+    background: $light,
+    color: $middle-gray,
+    link: #577192,
+  ),
+  gray-blue: (
+    background: $gray-blue,
+    color: $middle-gray,
+    link: #7a4226,
+  ),
+  light-brown: (
+    background: $light-brown,
+    color: $middle-gray,
+    link: #56796b,
+  ),
+  middle-gray: (
+    background: $middle-gray,
+    color: $white,
+    link: #67a3ac
+  ),
+  dark: (
+    background: $dark,
+    color: $white,
+    link: $white
+  )
+);
+
+// Dimensions
+$mobile : 480px;
+$tablet : 1024px;
+
+// Typography
+$font-size: (
+  large   : (17px, 22px, 25px),
+  h1      : (15px, 20px, 23px),
+  h2      : (14px, 18px, 20px),
+  h3      : (13px, 15px, 18px),
+  base    : (12px, 13px, 14px),
+  button  : (12px, 13px),
+  button-small: (10px, 12px),
+  button-mini: (8px, 9px),
+  small   : (10px, 12px, 13px),
+  x-small : (8px, 8px, 8px)
+);
+$font-weight: (
+  bold: (500, 400),
+  base: (400, 300)
+);
+
+// Z-index
+$z-index: (
+  intro,
+  pre-order,
+  frame,
+  header,
+  pre-order-fixed-link
+);

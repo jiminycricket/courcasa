@@ -1,0 +1,33 @@
+@each $theme, $setting in $themes
+  $background: map-get($setting, background)
+  $color: map-get($setting, color)
+  $link: map-get($setting, link)
+  .t-#{$theme}
+    background: $background
+    color: $color
+    a
+      color: $link
+    hr
+      border-bottom-color: rgba($link, .4)
+    &.post-list
+      h1
+        color: $link
+      a:hover
+        color: darken($link, 10)
+      .circle
+        background: $link
+        color: $white
+      .category
+        background: $link
+        a
+          color: $white
+      .media-body:before
+        background: rgba($link, .4)
+      &.type-tile
+        .title
+          color: $white
+          &:hover
+            background: rgba($link, .8)
+    &#aside
+      .h2
+        border-color: rgba($link, .3)

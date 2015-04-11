@@ -1,0 +1,52 @@
+.list-page
+  .post-list
+    &.list-view
+      padding: 30px
+      .post
+        background: none
+    &.cover-view
+      padding: 0
+      .posts
+        background: $dark-blue
+        +clearfix
+      .post
+        position: relative
+        width: 33.3333%
+        height: 250px
+        float: left
+        .cover, .post-link, h2
+          position: absolute
+        .cover, .post-link
+          left: 0
+          top: 0
+          width: 100%
+          height: 100%
+        .cover
+          background-size: cover
+          background-position: center center
+        .post-link
+          display: block
+          color: $white
+          background: rgba($dark-blue, .7)
+          transition: background .3s
+          h2
+            top: 50%
+            margin: 20px
+            font-weight: bold
+            font-size: 18px
+            transform: translateY(-50%)
+            backface-visibility: hidden
+          &:hover
+            background: rgba($dark-blue, 1)
+        .circle, .category
+          position: absolute
+          color: $white
+          background: $dark-blue
+        .circle
+          left: 20px
+          top: 20px
+        .category
+          right: 20px
+          bottom: 20px
+          a
+            color: $white
