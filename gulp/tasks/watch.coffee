@@ -7,7 +7,7 @@ gulp     = require('gulp')
 config   = require('../config')
 
 gulp.task 'watch', ['watchify', 'browserSync'], ->
-  gulp.watch(config.sass.src,   ['sass', 'css'])
+  gulp.watch(config.sass.src,   ['sass'])
   gulp.watch(config.images.src, ['images'])
   gulp.watch(config.jade.watch, ['jade'])
   gulp.watch(config.jade.yml, ['jade'])

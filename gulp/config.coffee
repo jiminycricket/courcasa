@@ -1,4 +1,4 @@
-PROJECT_NAME = 'Project'
+PROJECT_NAME = 'courcasa'
 SRC          = './src'
 DEST         = './build'
 BOWER        = './bower_components'
@@ -51,13 +51,11 @@ module.exports =
       appendCodepoints: true
       normalize: false
   browserify:
-    # A separate bundle will be generated for each
-    # bundle config in the list below
     bundleConfigs: [
         entries: "#{SRC}/javascript/global.coffee"
         dest: "#{DEST}/javascript"
         outputName: 'global.js'
-        extentions: ['.coffee']
+        extensions: ['.coffee']
         require: ['jquery']
     ]
   production:
