@@ -2,15 +2,3 @@ extends ../layout/_category
 
 append config
   - breadcrumb = [category_tree[0]]
-
-block submenu
-  #submenu.clearfix
-    .category-name 好宅的意義
-    ul
-      each subs in subcategory_tree["1"]
-        li
-          a.sub-category(href="#")= subs.text
-          if !!subs.children
-            .children
-              each child in subs.children
-                a(href="#")= child

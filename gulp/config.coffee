@@ -34,7 +34,7 @@ module.exports =
       "#{SRC}/jade/**/*.jade"
       "!#{SRC}/jade/**/_*.jade"
     ],
-    yml: "#{SRC}/i18n/*.yml"
+    yml: "#{SRC}/data/*.yml"
     watch: "#{SRC}/jade/**/*.jade"
     dest: DEST
   iconFonts:

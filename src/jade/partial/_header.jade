@@ -1,29 +1,41 @@
-header#header
-  #function-bar
-    .pull-right
-      a.btn.btn-primary.small(href="#login") 登入／註冊
-    form#search-form
-      img(src="/images/search.svg")
-      i.small-arrow
-      input#search(type="text" placeholder="輸入你想找的東西")
-    if breadcrumb.length > 1
-      ul.breadcrumb
-        each link in breadcrumb
-          li: a(href="#{link.href}")= link.text
-  #menu
-    .inline-block
-      a(href="/"): img.logo(src="/images/logo.svg" width="64" height="64")
-    ul.inline-block
-      each category in category_tree
-        - var active_class = (breadcrumb && breadcrumb[0].text == category.text) ? 'active' : ''
-        li.category-item.inline-block(class="#{active_class}")
-          a(href=category.href)= category.text
-    .social-links.pull-right
-      ul
-        li: a(href="#")
-          i.fa.fa-facebook-square
-        li: a(href="#")
-          i.fa.fa-pinterest-square
-        li: a(href="#")
-          img(src="/images/weibo.svg")
-  block submenu
+#function-bar
+  .pull-right
+    a.btn.btn-primary.small(href="#login") 登入／註冊
+  form#search-form
+    img(src="/images/search.svg")
+    i.small-arrow
+    input#search(type="text" placeholder="輸入你想找的東西")
+  if breadcrumb.length > 1
+    ul.breadcrumb
+      each link in breadcrumb
+        li: a(href="#{link.href}")= link.text
+#menu
+  .inline-block
+    a(href="/"): img.logo(src="/images/logo.svg" width="64" height="64")
+  ul.inline-block
+    each category in category_tree
+      - var active_class = (breadcrumb && breadcrumb[0].text == category.text) ? 'active' : ''
+      li.category-item.inline-block(class="#{active_class}")
+        a(href=category.href)= category.text
+  .social-links.pull-right
+    ul
+      li: a(href="#")
+        i.fa.fa-facebook-square
+      li: a(href="#")
+        i.fa.fa-pinterest-square
+      li: a(href="#")
+        img(src="/images/weibo.svg")
+#submenu.clearfix.smooth-hide
+  .category-viewbox
+    each category in subcategory_tree
+      .category-box
+        //- p= category.intro
+        ul
+          each subs in category.children
+            li.sub-category-box
+              a.sub-category-text(href="#")= subs.text
+              if !!subs.children
+                .children
+                  ul
+                    each child in subs.children
+                      li: a(href="#")= child
