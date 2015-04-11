@@ -60,3 +60,15 @@ category_tree:
   - { text: '家具家飾', href: '/category/5.html'}
   - { text: '設計達人', href: '/category/6.html'}
   - { text: '簡体版', href: '#'}
+subcategory_tree:
+  1:
+    - {text: '新手看這裡'}
+    - {text: '在裝修之前'}
+    - {text: '法律與簽約', children: ['法律', '簽約']}
+    - {text: '通風採光談格局', children: ['觀點', '平面圖']}
+    - {text: '省錢／錢要怎麼花', children: ['姥姥說', '估價單']}
+    - {text: '收納', children: ['櫃子設計', '系統家具']}
+    - {text: '照明', children: ['觀點', '燈具']}
+    - {text: '隔熱', children: ['觀點', '建材']}
+    - {text: '健康／甲醛', children: ['觀點', '建材']}
+    - {text: '捉漏／壁癌', children: ['觀點', '建材']}
