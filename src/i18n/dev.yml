@@ -1,0 +1,6 @@
+lang: 'en'
+base: '/'
+pages:
+  home: 'Home'
+  faq: 'FAQ'
+  media: 'Media'

@@ -1,0 +1,6 @@
+lang: 'jp'
+base: '/jp/'
+pages:
+  home: 'HOME'
+  faq: 'FAQ'
+  media: 'メディア資料'

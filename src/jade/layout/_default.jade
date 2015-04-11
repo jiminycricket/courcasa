@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    include _head
+  body
+    .wrapper
+      block header
+        header#header
+          include ../partial/_header
+      .main
+        block content
+      block footer
+        footer#footer
+    block outside
+    script(src="/javascript/global.js")
