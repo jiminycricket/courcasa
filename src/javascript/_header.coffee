@@ -6,21 +6,18 @@ window.$ = $
 $window  = $(window)
 $body    = $('body')
 
-$header  = $('#header')
-$menu    = $('#menu')
-$categoryItem = $('.category-item')
+$header       = $('#header')
+$menu         = $header.find('#menu')
+$categoryItem = $header.find('.category-item')
 
-$submenu = $('#submenu')
-$categoryViewbox = $('.category-viewbox')
-$categoryBox = $('.category-box')
+$submenu         = $('#submenu')
+$categoryViewbox = $submenu.find('.category-viewbox')
+$categoryBox     = $submenu.find('.category-box')
 
 $shadow  = $('#shadow-header')
 $main    = $('.main')
 
-$shadow.height($header.height())
-
-$window.on 'scroll', ->
-  $submenu.toggleClass('smooth-hide', $main[0].getBoundingClientRect().top < $menu[0].getBoundingClientRect().bottom)
+$shadow.css('padding-top', $header.height())
 
 $categoryItem.on 'mouseenter', ->
   $el = $(@)

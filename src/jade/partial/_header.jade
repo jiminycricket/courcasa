@@ -8,15 +8,15 @@
   if breadcrumb.length > 1
     ul.breadcrumb
       each link in breadcrumb
-        li: a(href="#{link.href}")= link.text
+        li: a(href="#{link.href}") #{link.text}
 #menu
   .inline-block
     a(href="/"): img.logo(src="/images/logo.svg" width="64" height="64")
   ul.inline-block
-    each category in category_tree
+    each category in categories
       - var active_class = (breadcrumb && breadcrumb[0].text == category.text) ? 'active' : ''
-      li.category-item.inline-block(class="#{active_class}")
-        a(href=category.href)= category.text
+      li.category-item.inline-block(class=active_class)
+        a(href=category.href) #{category.text}
   .social-links.pull-right
     ul
       li: a(href="#")
@@ -25,17 +25,17 @@
         i.fa.fa-pinterest-square
       li: a(href="#")
         img(src="/images/weibo.svg")
-#submenu.clearfix.smooth-hide
+#submenu.module-submenu.clearfix.smooth-hide
   .category-viewbox
     each category in subcategory_tree
       .category-box
-        //- p= category.intro
+        //- p !{category.intro}
         ul
           each subs in category.children
             li.sub-category-box
-              a.sub-category-text(href="#")= subs.text
+              a.sub-category-text(href="#") #{subs.text}
               if !!subs.children
                 .children
                   ul
                     each child in subs.children
-                      li: a(href="#")= child
+                      li: a(href="#") #{child}

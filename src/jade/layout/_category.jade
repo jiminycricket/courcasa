@@ -2,6 +2,23 @@ extends ../layout/_default
 
 append config
   - body_class = 'list-page'
+  - breadcrumb = [categories[category_id-1]]
+
+block shadow-header
+  .module-submenu.clearfix
+    .category-viewbox
+      - var currentCategory = subcategory_tree[category_id]
+        .category-box.active
+          p !{currentCategory.intro}
+          ul
+            each subs in currentCategory.children
+              li.sub-category-box
+                a.sub-category-text(href="#") #{subs.text}
+                if !!subs.children
+                  .children
+                    ul
+                      each child in subs.children
+                        li: a(href="#") #{child}
 
 block main
   .post-list.cover-view
