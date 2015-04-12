@@ -1,0 +1,22 @@
+#category_neighbors
+  .neighbor
+    width: 50%
+    height: 100px
+    line-height: 100px
+    float: left
+    + .neighbor
+      border-left: 1px solid $pale-blue
+    &:only-child
+      width: 100%
+  a
+    display: block
+    height: 100%
+    background: $white
+    color: $dark-blue
+    padding: 0 10px
+    text-align: center
+    &:hover
+      background: $pale-blue
+      color: $white
+  .fa
+    padding: 0 5px
