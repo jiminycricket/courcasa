@@ -77,24 +77,29 @@
       &:before
         content: ''
         position: absolute
-        width: 6px
-        height: 6px
-        margin-left: -3px
+        width: 40px
+        height: 3px
         left: 50%
-        bottom: 28px
-        background: rgba(#337ab7, 0)
-        border-radius: 50%
+        bottom: 35px
+        margin-left: -20px
+        background: rgba($light-blue, 0)
+        border-radius: 5px
         transition: background .3s
-      &.active, &:hover
+      &.active
         &:before
-          background: #337ab7
+          background: $pale-blue
         a
-          color: #337ab7
+          color: $pale-blue
+      &:hover
+        &:before
+          background: $light-blue
+        a
+          color: $light-blue
       a
-        color: $dark-blue
+        color: $light-gray
         transition: color .3s
         &:hover
-          color: #337ab7
+          color: $light-blue
   a
     display: block
     height: 100px
