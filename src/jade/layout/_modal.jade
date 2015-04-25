@@ -1,0 +1,24 @@
+block config
+  include _config
+
+- var body_id = 'page-modal'
+doctype html
+html
+  head
+    include _head
+  body(id="#{body_id}" class="#{body_class}")
+    #top
+    #shadow-header
+      block shadow-header
+    include ../partial/_fb_root
+    .page-modal
+      .page-modal-container(id="#{modal_id}")
+        .page-modal-title
+          block page-modal-title
+        .page-modal-wapper
+          block page-modal-wapper
+        .footer-logo
+          .text-center
+            a(href="/"): img.logo(src="/images/logo.svg" width="64" height="64")
+            p courcasa©2015 all rights reserved.
+

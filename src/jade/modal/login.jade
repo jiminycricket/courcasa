@@ -1,0 +1,31 @@
+extends ../layout/_modal
+
+append config
+  - var modal_id = "login"
+
+
+block page-modal-wapper
+  block require-login
+  .login-wapper
+    .social-login.col-sm-6
+      h3 用社群網站登入
+      button.btn.btn-google
+        span
+          i.fa.fa-google-plus
+        | 用 Google 登入
+      button.btn.btn-fb
+        span
+          i.fa.fa-facebook
+        | 用 Facebook 登入
+      button.btn.btn-weibo
+        span
+          i.fa.fa-weibo
+        | 用微博登入
+    .email-login.col-sm-6
+      h3 用 e-mail 登入
+      input.input.input-primary(id="singup-email" type="text" placeholder="信箱")
+      input.input.input-primary(id="singup-password" type="text" placeholder="密碼")
+      p.to-forget-password
+         a(href="./forget_password.html") 忘記密碼?
+      .btn.btn-modal 登入
+    .clear-both
