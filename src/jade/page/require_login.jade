@@ -8,29 +8,4 @@ block page-modal-wapper
     h3 螢幕前的俠女或俠客您好：
     p 您已看了數篇小院文章了，應是覺得我們寫得還行。不過小院文章只給會員看，所以想勸您加入小院吧，不然將無法再看到這些家居界的內幕與八卦。
     p.sign 小院創辦人姥姥  敬邀
-  .login-wapper.text
-    .social-login.col-sm-6
-      h3 用社群網站登入
-      button.btn.btn-google
-        i.fa.fa-google-plus
-        | 用 Google 登入
-      button.btn.btn-fb
-        i.fa.fa-facebook
-        | 用 Facebook 登入
-      button.btn.btn-weibo
-        i.fa.fa-weibo
-        | 用微博登入
-    .email-sign-up.col-sm-6
-      h3 用 e-mail 註冊
-      input#singup-email.input.input-primary(type="text" placeholder="信箱")
-      input#singup-password.input.input-primary( type="text" placeholder="密碼")
-      input#singup-nick.input.input-primary( type="text" placeholder="行走江湖的稱號")
-      label.agree-rules
-        input(type="checkbox")
-        span
-          | 我同意小院
-          a(href="./member_rule.html" target="_blank") 會員規範
-      .submit-singup
-        button.btn.btn-modal(type="submit") 加入會員
-        a.to-email-login(href="login.html" ) 我已有帳號，用 e-mail 登入
-    .clearfix
+  include ../partial/_page_login_section

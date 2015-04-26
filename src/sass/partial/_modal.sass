@@ -44,32 +44,31 @@
   .social-login
     .btn
       text-align: left
-      width: 90%
+      width: 80%
       .fa
-        margin: 0 40px 0 10px
+        margin: 0 35px 0 5px
         width: 0
         +font-size(large)
   .email-sign-up
-    +sm-tablet
-      border-left: 1px solid $lightest-gray
-    // +max($sm-tablet)
-    padding-top: 30px
     border-left: 0px solid $lightest-gray
+    padding-top: 30px
+    +sm-tablet
+      padding-top: 0px
+      border-left: 1px solid $lightest-gray
   a
     text-decoration: underline
 #login
   .email-login
     height: 300px
-    border-left: 1px solid $lightest-gray
+    border-left: 0px solid $lightest-gray
+    height: auto
     .to-forget-password
       text-align: right
       a
         +font-size(small)
         text-decoration: none
-    // +max($sm-tablet)
     +sm-tablet
-      border-left: 0px solid $lightest-gray
-      height: auto
+      border-left: 1px solid $lightest-gray
 
 #require-login
   .sign
