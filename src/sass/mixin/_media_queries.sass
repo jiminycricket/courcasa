@@ -17,6 +17,9 @@
   @else if $device == desktop // $tablet ~ ∞
     +min($tablet)
       @content
+  @else if $device == sm-tablet // $tablet ~ ∞
+    +min($sm-tablet)
+      @content
   @else if $device == not-mobile // $mobile ~ ∞
     +min($mobile)
       @content
@@ -32,6 +35,9 @@
 
 =tablet
   +mq(tablet)
+    @content
+=sm-tablet
+  +mq(sm-tablet)
     @content
 =desktop
   +mq(desktop)

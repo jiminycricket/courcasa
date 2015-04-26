@@ -1,23 +1,18 @@
 .page-modal
   width: 100%
   height: 100vh
-  .page-modal
-    width: 100%
-    height: 100%
   .page-modal-container
     position: absolute
     top: 0
     left: 0
     right: 0
     bottom: 0
-    margin:auto
+    margin: auto
     margin-top: 5%
     .page-modal-title
       text-align: center
       padding-bottom: 30px
     .page-modal-wapper
-      // +border-radius(5px)
-      // +box-shadow( rgba($black, 30%) 0 0 4px )
       max-width: 720px
       border-radius: 5px
       box-shadow: 0 0 4px rgba($black, 0.3)
@@ -25,9 +20,7 @@
       margin: 0 auto
       width: 80%
       padding: 30px
-      h3
-        font-weight: 700
-      h2
+      h2, h3
         font-weight: 700
       p
         margin-top: 5px
@@ -37,37 +30,31 @@
         background-color: $light-browen
         padding: 20px
         border-radius: 5px
-      .column
-        display: inline-block
-        width: 50%
-        background-color: #f00
       .input
         width: 100%
       .btn, input
         margin-top: 15px
-      .clear-both
-        +pie-clearfix
     .footer-logo
       margin-top: 30px
       margin-bottom: 30px
 
-#login, #require_login
+#login, #require-login
   .page-modal-wapper
     width: 70%
   .social-login
     .btn
       text-align: left
       width: 90%
-      span
+      .fa
         margin: 0 40px 0 10px
-      i
         width: 0
         +font-size(large)
   .email-sign-up
-    border-left: 1px solid $lightest-gray
-    +max(768px)
-      padding-top: 30px
-      border-left: 0px solid $lightest-gray
+    +sm-tablet
+      border-left: 1px solid $lightest-gray
+    // +max($sm-tablet)
+    padding-top: 30px
+    border-left: 0px solid $lightest-gray
   a
     text-decoration: underline
 #login
@@ -76,41 +63,53 @@
     border-left: 1px solid $lightest-gray
     .to-forget-password
       text-align: right
-    +max(768px)
-      padding-top: 30px
+      a
+        +font-size(small)
+        text-decoration: none
+    // +max($sm-tablet)
+    +sm-tablet
       border-left: 0px solid $lightest-gray
       height: auto
 
-#require_login
+#require-login
   .sign
     color: $lightest-gray
-    +font-size(small)
     text-align: right
+    margin-top: 50px
+    +font-size(x-small)
   .agree-rules
-    font-weight: 700
+    display: block
     span
       margin-left: 10px
+  .submit-singup
+    .btn
+      margin-top: 0
+    vertical-align: middle
+    margin-top: 15px
   .to-email-login
+    vertical-align: middle
     margin-left: 10px
-    vertical-align: bottom
     text-decoration: underline
     white-space: nowrap
   .notice
     margin-bottom: 15px
-    p:nth-child(1)
-      margin-bottom: 50px
 
-
-#forget_password
+#forget-password
   .page-modal-wapper
-    p
-      font-weight: 700
     border-radius: 8px
     width: 330px
+    p
+      font-weight: 700
   .input
     margin-top: 15px
     width: 100%
-
     float: right
 
-
+#member-rule
+  li
+    margin-left: 25px
+  ol
+    > li
+      list-style-type: decimal
+    ol > li
+      list-style-type: cjk-ideographic
